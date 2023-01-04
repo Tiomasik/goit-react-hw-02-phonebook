@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { nanoid } from 'nanoid'
+
 import { StyleForm } from './Form.styled'
 
 
@@ -12,22 +13,22 @@ class Form extends Component {
   handlChange = (evt) => {
     const {name, value} = evt.currentTarget
     this.setState(
-        {
-            id: nanoid(),
-            [name]: value,
-        })
+      {
+        id: nanoid(),
+        [name]: value,
+      })
   }
 
   handlSubmit = (evt) => {
-      evt.preventDefault()
-      this.props.onSubmit(this.state)
-      this.resetForm()
-    }
+    evt.preventDefault()
+    this.props.onSubmit(this.state)
+    this.resetForm()
+  }
     
-    resetForm = () => {
-        this.setState(
-        { name: '', number: '' })
-    }
+  resetForm = () => {
+    this.setState(
+    { name: '', number: '' })
+  }
 
   render() {
     const {name, number} = this.state
@@ -37,6 +38,7 @@ class Form extends Component {
         <h2 style={{textAlign: 'center',
                     fontSize: 30,
                     fontWeight:700}}>Phonebook</h2>
+        
         <StyleForm onSubmit={this.handlSubmit}>
           <label htmlFor='userName'>Name</label>
           <input
@@ -63,8 +65,7 @@ class Form extends Component {
             />
           <button type='submit'>Add Contact</button>
         </StyleForm>
-      </>
-        
+      </>    
     );
   }
 }

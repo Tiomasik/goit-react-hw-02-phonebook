@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+
 import Form from './ContactsBook/Form';
 import ContactList from './ContactsBook/ContactList'
 import Filter from './ContactsBook/Filter'
@@ -23,7 +24,6 @@ class App extends Component {
       }));
     } else alert(`${data.name} is already in contacts`)
   };
-
 
   deleteContact = (contactID) => {
     this.setState(prevState => ({

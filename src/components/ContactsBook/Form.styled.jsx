@@ -29,7 +29,6 @@ export const StyleForm = styled.form `
         border: 1px solid blue;
         background-color: transparent;
         border-radius: 5px;
-        color: blue;
 
         :hover, :focus {
             background-color: blue;

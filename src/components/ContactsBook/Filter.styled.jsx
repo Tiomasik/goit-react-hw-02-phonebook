@@ -12,5 +12,4 @@ export const StyleInput = styled.input `
     margin-right: auto;
     width: 200px;
     padding: 3px;
-    margin-bottom:10px;
 `

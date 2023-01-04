@@ -1,18 +1,17 @@
 import styled from 'styled-components';
 
 export const List = styled.ul `
-    margin-left: auto;
-    margin-right: auto;
-    padding: 0;
-    width: 400px;
+    margin: 0 auto;
+    margin-top: 15px;
+    padding: 10px;
+    width: 450px;
     display:flex;
     flex-direction:column;
     gap:10px;
 `
 export const Item = styled.li `
-    padding: 5px;
-    border: 1px solid blue;
-    width: 100%;
+    padding:0 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2), 0 4px 6px rgba(0,0,0,0.2);
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -30,7 +29,7 @@ export const Item = styled.li `
         }
     }
 
-    p{
+    p {
         font-weight: 500;
     }
 `
