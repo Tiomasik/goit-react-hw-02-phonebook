@@ -1,13 +1,16 @@
+import ContactItem from './ContactItem'
+import { List, Item } from './ContactList.styled'
 
-const ContactList = ({contacts, deleteContact}) => (
-    <ul>
-        {contacts.map(({ name, number, id }) =>
-            <li key={id}>
-                <p>Name: { name }</p>
-                <p>Number: {number}</p>
-                <button type="button" onClick={() => deleteContact(id)}>Delete contact</button>
-            </li>)}
-    </ul>
+const ContactList = ({ contacts, deleteContact }) => (
+    <List>
+        {contacts.map(({ id, name, number }) =>
+            <Item key={id}>
+                <ContactItem name={name}
+                    number={number}
+                    id={id}
+                    deleteContact={deleteContact} />
+            </Item>)}
+    </List>
 )
 
 export default ContactList
