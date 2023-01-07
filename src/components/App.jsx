@@ -17,7 +17,7 @@ class App extends Component {
 
   addContact = (data) => {
     const { contacts } = this.state
-    if (!(contacts.filter(contact => contact.name === data.name)).length) {
+    if (!(contacts.filter(contact => contact.name.toLowerCase() === data.name.toLowerCase())).length) {
       this.setState(({ contacts }) => (
         {
         contacts: [data, ...contacts],

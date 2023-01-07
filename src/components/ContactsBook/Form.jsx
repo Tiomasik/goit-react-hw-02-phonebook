@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { nanoid } from 'nanoid'
+import PropTypes from 'prop-types';
 
 import { StyleForm } from './Form.styled'
 
@@ -68,6 +69,10 @@ class Form extends Component {
       </>    
     );
   }
+}
+
+Form.propTypes = {
+    onSubmit: PropTypes.func.isRequired,
 }
 
 export default Form;
